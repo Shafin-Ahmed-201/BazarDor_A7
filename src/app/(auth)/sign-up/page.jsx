@@ -77,12 +77,12 @@ return ( <main className="min-h-screen bg-[#f0f5f0] px-4 py-8 sm:py-10"> <div cl
         onSubmit={handleSubmit}
       >
         {/* Name */}
-        <TextField isRequired name="image" type="text">
+        <TextField isRequired name="name" type="text">
           <Label className="mb-1.5 block text-sm font-medium text-[#202b24]">
-            ইমেজ
+            নাম
           </Label>
           <Input
-            placeholder="ইমেজ লিঙ্ক দিন"
+            placeholder="যেমন: রহিম উদ্দিন"
             className="h-10 w-full rounded-lg border border-[#dce5dc] bg-transparent px-3 text-sm text-[#26332a] outline-none focus-within:border-green-600"
           />
           <FieldError />
