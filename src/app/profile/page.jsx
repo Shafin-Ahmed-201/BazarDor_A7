@@ -28,8 +28,8 @@ const ProfilePage = () => {
             <h1 className='text-3xl font-semibold'>আমার প্রোফাইল</h1>
             <p className='text-gray-500 mb-3'>আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।</p>
             <div className='flex justify-between bg-white h-25 p-7 rounded-xl mb-7'>
-                <div className='flex items-center'>
-                    <img className='w-15' src={session?.user?.image} alt="userimg" />
+                <div className='flex items-center gap-2'>
+                    <img className='w-15 rounded-md' src={session?.user?.image} alt="userimg" />
                     <div>
                     <h2 className='font-semibold'>{session?.user?.name}</h2>
                     <p>{session?.user?.email}</p>

@@ -24,6 +24,17 @@ toast.error(error.message);
 
 
 };
+
+const handelGoogleSignIn = async () => {
+  const data = await authClient.signIn.social({
+    provider: "google",
+  });
+};
+const handelGithubSignIn = async () => {
+    const data = await authClient.signIn.social({
+        provider: "github"
+    })
+}
     return (
         <main className="min-h-screen bg-[#f0f5f0] px-4 py-8 sm:py-10"> <div className="mx-auto w-full max-w-[416px]">
 
@@ -111,16 +122,18 @@ toast.error(error.message);
         <Button
           type="button"
           variant="outline"
-          className="h-10 min-w-0 flex items-center rounded-lg border border-[#dce5dc] bg-transparent px-2 text-xs font-semibold text-[#26332a] hover:bg-[#f0f5f0] sm:text-sm"
+          className="cursor-pointer h-10 min-w-0 flex items-center rounded-lg border border-[#dce5dc] bg-transparent px-2 text-xs font-semibold text-[#26332a] hover:bg-[#f0f5f0] sm:text-sm"
+          onClick={handelGoogleSignIn}
         >
             <span className="font-bold text-lg text-[#4285f4]">G</span>
           Google দিয়ে চালিয়ে যান
         </Button>
           
         <Button
+        onClick={handelGithubSignIn}
           type="button"
           variant="outline"
-          className="h-10 flex items-center min-w-0 rounded-lg border border-[#dce5dc] bg-transparent px-2 text-xs font-semibold text-[#26332a] hover:bg-[#f0f5f0] sm:text-sm"
+          className="cursor-pointer h-10 flex items-center min-w-0 rounded-lg border border-[#dce5dc] bg-transparent px-2 text-xs font-semibold text-[#26332a] hover:bg-[#f0f5f0] sm:text-sm"
         >
             <svg
             viewBox="0 0 24 24"
