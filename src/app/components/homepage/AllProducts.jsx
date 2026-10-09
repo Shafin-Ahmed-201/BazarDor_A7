@@ -10,7 +10,7 @@ const AllProducts = async() => {
 const data= await res.json()
     return (
         <div className='w-7xl mb-5 mx-auto space-y-3'>
-            <h2 className='text-xl mt-7'>সব পণ্য</h2>
+            <h2 id='allProduct' className='text-xl mt-7'>সব পণ্য</h2>
             <p>মোট <span>{Number(data.length).toLocaleString("bn-BD")}</span>টি পণ্য দেখানো হচ্ছে</p>
         <div className='grid grid-cols-3 gap-3'>
             {

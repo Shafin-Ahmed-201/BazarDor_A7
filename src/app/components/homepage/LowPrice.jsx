@@ -9,13 +9,14 @@ const LowPrice = async() => {
 })
 const data= await res.json()
 const lowPrice=data.filter((d)=>d.change.dir==='down')
+const lowSix=lowPrice.sort((a,b)=>b.change.pct-a.change.pct).slice(0,6)
     return (
         <div className='w-7xl mx-auto space-y-3 mt-7'>
             <h2 className='text-xl'><span className='text-green-600'>▼</span>আজ দাম কমেছে
             </h2>
         <div className='grid grid-cols-3 gap-3'>
             {
-                lowPrice.map((item)=><ProductCard key={item.id} product={item}></ProductCard>)
+                lowSix.map((item)=><ProductCard key={item.id} product={item}></ProductCard>)
             }
         </div>
         </div>

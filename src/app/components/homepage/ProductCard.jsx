@@ -1,9 +1,25 @@
+
+import Link from "next/link";
+
 const ProductCard = ({ product }) => {
   const banglaNumber = (value) =>
-    Number(value).toLocaleString("bn-BD");
+Number(value).toLocaleString("bn-BD");
+const toBanglaUnit = (unit) => {
+  const units = {
+    kg: "কেজি",
+    gram: "গ্রাম",
+    liter: "লিটার",
+    litre: "লিটার",
+    piece: "পিস",
+    dozen: "ডজন",
+    packet: "প্যাকেট",
+  };
 
+  return units[unit?.toLowerCase()] || unit;
+};
   return (
-    <div className="w-full max-w-90 rounded-[18px] border border-[#dce3dc] bg-[#f8faf8] px-4 py-4">
+    <Link href={`/details/${product.id}`}>
+    <div className="w-full max-w-90 rounded-[18px] border border-[#dce3dc] hover:border-green-300 bg-[#f8faf8] px-4 py-4">
       {/* Product */}
       <div className="flex items-center gap-3">
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f0f4f0] text-2xl">
@@ -16,7 +32,7 @@ const ProductCard = ({ product }) => {
           </h2>
 
           <p className="text-[13px] text-[#4d554f]">
-            প্রতি {product.unit}
+            প্রতি {toBanglaUnit(product.unit)}
           </p>
         </div>
       </div>
@@ -51,6 +67,7 @@ const ProductCard = ({ product }) => {
         </span>
       </div>
     </div>
+    </Link>
   );
 };
 
