@@ -1,17 +1,18 @@
 import { NextResponse } from "next/server";
+import { getSessionCookie } from "better-auth/cookies";
 
 export function proxy(request) {
-const sessionCookie = request.cookies.get("better-auth.session_token");
+  const sessionCookie = getSessionCookie(request);
 
-if (!sessionCookie?.value) {
-return NextResponse.redirect(
-new URL("/sign-in", request.url)
-);
-}
+  if (!sessionCookie) {
+    return NextResponse.redirect(
+      new URL("/sign-in", request.url)
+    );
+  }
 
-return NextResponse.next();
+  return NextResponse.next();
 }
 
 export const config = {
-matcher: ["/details/:path*", "/profile/:path*"],
+  matcher: ["/details/:path*", "/profile/:path*"],
 };
