@@ -125,7 +125,7 @@ const handelGithubSignIn = async () => {
           className="cursor-pointer h-10 min-w-0 flex items-center rounded-lg border border-[#dce5dc] bg-transparent px-2 text-xs font-semibold text-[#26332a] hover:bg-[#f0f5f0] sm:text-sm"
           onClick={handelGoogleSignIn}
         >
-            <span className="font-bold text-lg text-[#4285f4]">G</span>
+           <img src={'/Google.png'} alt="googleLogo" />
           Google দিয়ে চালিয়ে যান
         </Button>
           
@@ -135,13 +135,7 @@ const handelGithubSignIn = async () => {
           variant="outline"
           className="cursor-pointer h-10 flex items-center min-w-0 rounded-lg border border-[#dce5dc] bg-transparent px-2 text-xs font-semibold text-[#26332a] hover:bg-[#f0f5f0] sm:text-sm"
         >
-            <svg
-            viewBox="0 0 24 24"
-            className="h-4 w-4 shrink-0 fill-current"
-            aria-hidden="true"
-          >
-            <path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.3-1.24-1.64-1.24-1.64-1.02-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1 .1.8 2.1 3.9 1.42.1-.73.39-1.23.7-1.52-2.48-.28-5.1-1.24-5.1-5.53 0-1.22.43-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.08 1.14a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.14 3.08-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.3-2.62 5.25-5.11 5.52.4.35.75 1.03.75 2.08v3.08c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z" />
-          </svg> 
+           <img src={'/Vector.png'} alt="gitLogo" />
           GitHub দিয়ে চালিয়ে যান
         </Button>
       </div>

@@ -1,5 +1,6 @@
 export const instant = false;
 import CategorySort from "@/app/components/CategorySort";
+import FetchError from "@/app/components/FetchError";
 import Image from "next/image";
 import React from "react";
 
@@ -13,6 +14,9 @@ const CategoryProduct = async ({ params }) => {
       },
     },
   );
+  if(!res.ok){
+    return <FetchError></FetchError>
+  }
   const data = await res.json();
   const products = data;
   const product=products[0]

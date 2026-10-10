@@ -1,4 +1,5 @@
 export const instant = false;
+import FetchError from "@/app/components/FetchError";
 import Link from "next/link";
 import React from "react";
 
@@ -12,6 +13,9 @@ const DetailsPage = async ({ params }) => {
       },
     },
   );
+  if(!res.ok){
+      return <FetchError></FetchError>
+    }
   const data = await res.json();
   const product = data;
 

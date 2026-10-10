@@ -8,7 +8,7 @@ import  Avatar  from "@/app/components/Avatar";
 const Navbar = () => {
   return (
     <div className="bg-white">
-      <nav className="w-7xl mx-auto">
+      <nav className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-2">
           <div className="flex gap-1">
             <div>

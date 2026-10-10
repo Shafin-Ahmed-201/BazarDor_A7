@@ -1,8 +1,6 @@
-
-import Link from "next/link";
-
 import React from "react";
 import Links from "./Links";
+import FetchError from "./FetchError";
 
 const NavLinks = async () => {
   
@@ -11,6 +9,9 @@ const NavLinks = async () => {
     revalidate: 60,
   },
 });
+if(!res.ok){
+    return <FetchError></FetchError>
+  }
   const data = await res.json();
   const navs = data
   

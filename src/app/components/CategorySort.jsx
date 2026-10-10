@@ -18,7 +18,7 @@ const CategorySort = ({products}) => {
   });
     return (
         <div>
-           <div className="flex justify-end items-center gap-1 mt-9 w-7xl mx-auto bg-white py-3 pr-5 mb rounded-xl">
+           <div className="flex lg:justify-end items-center gap-1 mt-9 w-7xl mx-auto bg-white py-3 pr-5 mb rounded-xl">
           <p className="text-gray-400">সাজান</p>
           <select
             value={sortBy}
@@ -32,7 +32,7 @@ const CategorySort = ({products}) => {
         </div> 
           <div>
             <h2 className="text-gray-500 mb-1 mt-3">{`মোট ${Number(products.length).toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে`}</h2>
-            <div className="grid grid-cols-3 gap-3">
+             <div className=" grid grid-cols-1 justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-3">
                 {
                     productSorted.map((p)=><ProductCard key={p.id} product={p}></ProductCard>)
                 }
