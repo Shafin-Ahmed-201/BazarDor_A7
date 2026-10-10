@@ -1,3 +1,73 @@
+# 🛒 বাজার দর | BazarDor
+
+### Your Daily Essential Commodity Price Tracker
+
+**বাজার দর (BazarDor)** is a web application that helps users explore and compare the prices of essential daily commodities in Bangladesh. It provides an easy way to check current prices and understand price changes over time through a simple, user-friendly interface.
+
+## 🚀 Technologies Used
+
+- **Next.js** — React framework for building the web application.
+- **React.js** — Component-based user interface development.
+- **JavaScript** — Application logic and data handling.
+- **Tailwind CSS** — Responsive styling and modern UI design.
+- **DaisyUI** — Prebuilt UI components and styling utilities.
+- **REST API** — Fetching product and commodity price information.
+
+## ✨ Key Features
+
+1. **📊 Daily Price Tracking** — View the latest prices of essential commodities in Bangladesh.
+2. **🔍 Product Browsing** — Explore products organized by categories, such as rice and other daily necessities.
+3. **↕️ Price Sorting** — Sort products from lowest to highest price or highest to lowest price.
+4. **📈 Price Change Comparison** — Compare current prices with previous prices to understand price increases and decreases.
+5. **📱 Responsive Design** — Enjoy a user-friendly browsing experience across mobile phones, tablets, laptops, and desktop computers.
+
+## 🖥️ Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone YOUR_REPOSITORY_URL
+```
+
+**2. Navigate to the project directory**
+
+```bash
+cd bazardor
+```
+
+**3. Install dependencies**
+
+```bash
+npm install
+```
+
+**4. Start the development server**
+
+```bash
+npm run dev
+```
+
+**5. Open the application**
+
+Visit [https://bazar-dor-a7-rho.vercel.app/] in your browser.
+
+## 🎯 Project Goal
+
+The goal of BazarDor is to make essential commodity price information easier to access, helping consumers stay informed about daily market prices in Bangladesh.
+
+---
+
+**বাজার দর (BazarDor) — বাজারের দামের তথ্য থাকুক আপনার হাতের মুঠোয়! 🇧🇩**
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
