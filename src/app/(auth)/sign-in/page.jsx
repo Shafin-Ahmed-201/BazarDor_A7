@@ -6,34 +6,37 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 
 const SignInPage = () => {
-    const handleSubmit = async(e) => {
-e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
+  const formData = new FormData(e.currentTarget);
+  const data = Object.fromEntries(formData.entries());
 
-const formData = new FormData(e.currentTarget);
-const data = Object.fromEntries(formData.entries());
-const { data:resData, error } = await authClient.signIn.email({
+  const { error } = await authClient.signIn.email({
     email: data.email,
     password: data.password,
-    rememberMe: true, // If false, the user will be signed out when the browser is closed. (optional) (default: true)
-    callbackURL: '/'
-});
+    rememberMe: true,
+    callbackURL: "/",
+  });
 
-console.log("Registration data:", data);
-toast.error(error.message);
-
-
+  if (error) {
+    toast.error(error.message);
+  } else {
+    toast.success("সফলভাবে লগইন হয়েছে! স্বাগতম।");
+  }
 };
 
 const handelGoogleSignIn = async () => {
   const data = await authClient.signIn.social({
     provider: "google",
   });
+  toast.success('সফলভাবে লগইন হয়েছে! স্বাগতম।')
 };
 const handelGithubSignIn = async () => {
     const data = await authClient.signIn.social({
         provider: "github"
     })
+    toast.success('সফলভাবে লগইন হয়েছে! স্বাগতম।')
 }
     return (
         <main className="min-h-screen bg-[#f0f5f0] px-4 py-8 sm:py-10"> <div className="mx-auto w-full max-w-[416px]">

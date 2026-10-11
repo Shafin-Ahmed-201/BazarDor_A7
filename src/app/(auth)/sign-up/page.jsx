@@ -5,9 +5,10 @@ import { Button, Description, FieldError, Form, Input, Label, TextField } from "
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export default function SignUp() {
-
+const router = useRouter();
 const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -39,6 +40,9 @@ const handleSubmit = async (e) => {
     // 4. Show success only after successful registration
     if (resData) {
       toast.success("অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে!");
+       setTimeout(() => {
+        router.push("/sign-in");
+      }, 1000);
     }
   } catch (err) {
     console.error("Sign-up error:", err);

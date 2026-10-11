@@ -6,7 +6,7 @@ import React from "react";
 const DetailsPage = async ({ params }) => {
   const { detailsId } = await params;
   const res = await fetch(
-    `https://api.api-store.workers.dev/api/bazardor/products/${detailsId}`,
+    `https://openapi.programming-hero.com/api/bazardor/products/${detailsId}`,
     {
       next: {
         revalidate: 60,

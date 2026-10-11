@@ -6,7 +6,7 @@ import AllProducts from "./components/homepage/AllProducts";
 export default function Home() {
   return (
     <>
-    <div className="w-7xl mx-auto">
+    <div>
     <Banner></Banner>
     <HighPrice></HighPrice>
     <LowPrice></LowPrice>

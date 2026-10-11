@@ -3,9 +3,6 @@ import React from 'react';
 import DateTime from './DateTime';
 
 const Banner = () => {
-    //  const date = new Date().toLocaleDateString("bn-BD", {
-    //   dateStyle: "full",
-    // });
     return (
        <div className="w-full max-w-7xl mx-auto bg-white p-4 sm:p-5 md:p-7 my-3 sm:my-4 md:my-5 rounded-xl">
            <div className="flex flex-col justify-center gap-4 lg:flex-row lg:justify-between lg:items-center">

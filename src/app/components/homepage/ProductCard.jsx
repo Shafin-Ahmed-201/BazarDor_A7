@@ -19,7 +19,7 @@ const toBanglaUnit = (unit) => {
 };
   return (
     <Link href={`/details/${product.id}`}>
-    <div className="w-full max-w-90 rounded-[18px] border border-[#dce3dc] hover:border-green-300 bg-[#f8faf8] px-4 py-4">
+    <div className="w-full min-w-0 max-w-90 rounded-[18px] border border-[#dce3dc] hover:border-green-300 bg-[#f8faf8] px-4 py-4">
       {/* Product */}
       <div className="flex items-center gap-3">
         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f0f4f0] text-2xl">

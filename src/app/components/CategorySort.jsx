@@ -30,7 +30,7 @@ const CategorySort = ({products}) => {
             <option value={"hightolow"}>বড় থেকে ছোট</option>
           </select>
         </div> 
-          <div>
+          <div className='flex flex-col items-center sm:flex sm:flex-col sm:items-stretch'>
             <h2 className="text-gray-500 mb-1 mt-3">{`মোট ${Number(products.length).toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে`}</h2>
              <div className=" grid grid-cols-1 justify-center sm:grid-cols-2 sm:justify-center lg:grid-cols-3 gap-3">
                 {

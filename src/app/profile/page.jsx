@@ -24,7 +24,7 @@ const ProfilePage = () => {
 
     }
     return (
-        <div className='w-5xl mx-auto mt-24 h-screen'>
+        <div className='max-w-5xl w-full mx-auto mt-24 h-screen'>
             <h1 className='text-3xl font-semibold'>আমার প্রোফাইল</h1>
             <p className='text-gray-500 mb-3'>আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।</p>
             <div className='flex justify-between bg-white h-25 p-7 rounded-xl mb-7'>
